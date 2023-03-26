@@ -50,12 +50,21 @@ const questions = [
   },
 ];
 
+const generateREADME = ({ username, email, projectname, description, license, email, runtest, repo, contributing }) => `
+Star Readme
+`
+inquirer.prompt(questions).then((answers) => {
+  console.log(generateREADME(answers))
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+})
 
-// TODO: Create a function to initialize app
-function init() {}
 
-// Function call to initialize app
-init();
+
+// // TODO: Create a function to write README file
+// const  writeToFile = (README.md, data) => {}
+
+// // TODO: Create a function to initialize app
+// function init() {}
+
+// // Function call to initialize app
+// init();
