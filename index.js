@@ -11,22 +11,22 @@ const questions = [
   {
     type: "input",
     message: "What is your email address?",
-    name: "age",
-  },
-  {
-    type: "input",
-    message: "What is your project's name?",
     name: "email",
   },
   {
     type: "input",
+    message: "What is your project's name?",
+    name: "projectname",
+  },
+  {
+    type: "input",
     message: "Please write a short description of your project",
-    name: "username",
+    name: "description",
   },
   {
     type: "input",
     message: "What kind of license should your project have?",
-    name: "age",
+    name: "license",
   },
   {
     type: "input",
@@ -36,19 +36,20 @@ const questions = [
   {
     type: "input",
     message: "What command should be run to run tests?",
-    name: "username",
+    name: "runtest",
   },
   {
     type: "input",
     message: "What does the user need to know about using the repo?",
-    name: "age",
+    name: "repo",
   },
   {
     type: "input",
     message: "What does the user need to know about contributing to the repo?",
-    name: "email",
+    name: "contributing",
   },
 ];
+
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
