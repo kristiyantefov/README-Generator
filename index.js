@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-// TODO: Create an array of questions for user input
+const backThicks = "```"
 const questions = [
   {
     type: "input",
@@ -16,7 +16,7 @@ const questions = [
   {
     type: "input",
     message: "What is your project's name?",
-    name: "projectname",
+    name: "projectName",
   },
   {
     type: "input",
@@ -24,19 +24,20 @@ const questions = [
     name: "description",
   },
   {
-    type: "input",
+    type: "list",
     message: "What kind of license should your project have?",
     name: "license",
+    choices: ['Apache License 2.0', 'MIT License','GNU General Public License v3.0','Mozilla Public License 2.0']
   },
   {
     type: "input",
-    message: "What command should be run to install dependencies?",
-    name: "email",
+    message: "What command should be run to start the program?",
+    name: "instalCommand",
   },
   {
     type: "input",
     message: "What command should be run to run tests?",
-    name: "runtest",
+    name: "runTest",
   },
   {
     type: "input",
@@ -50,11 +51,45 @@ const questions = [
   },
 ];
 
-const generateREADME = ({ username, email, projectname, description, license, email, runtest, repo, contributing }) => `
-Star Readme
+
+
+
+
+const generateREADME = ({ username, email, projectName, description, instalCommand, license, runTest, repo, contributing }) => 
+`# ${projectName}
+## Badges
+${"s"}
+## Table of Contents
+* [License](#license)
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [How to Contribute](#how-to-contribute)
+* [Tests](#tests)
+* [Questions?](#questions)
+## License
+${license}
+${"s"}
+## Description
+${"s"}
+## Installation
+${"s"}
+## Usage
+${"s"}
+## How to Contribute
+ 
+${"s"}
+## Tests
+${"s"}
+## Questions?
+### Reach me here: 
+[${username}](https://github.com/${username})  
+${email}
 `
 inquirer.prompt(questions).then((answers) => {
-  console.log(generateREADME(answers))
+  fs.writeFile('README1.md', generateREADME(answers), (err) => {
+
+  }) 
 
 })
 
