@@ -1,10 +1,11 @@
-[![Hex.pm](https://img.shields.io/hexpm/l/apa?style=for-the-badge)](https://choosealicense.com/licenses/apache-2.0/) ![GitHub all releases](https://img.shields.io/github/downloads/kristiyantefov/README-Generator/total?color=%232481C2&style=for-the-badge)    
-  # qwer
+[![Hex.pm](https://img.shields.io/hexpm/l/apa?style=for-the-badge)](https://choosealicense.com/licenses/apache-2.0/)    
+# qwer
 
 ## Table of Contents
 * [License](#license)
 * [Description](#description)
 * [Installation](#installation)
+* [Test](#test)
 * [Usage](#usage)
 * [How to Contribute](#how-to-contribute)
 * [Questions](#questions)
@@ -19,6 +20,11 @@ qwer
 qwer
 ```
 * You will need to run this command to run the program.
+```
+qwer
+```
+## Test
+* You will need to run this command to test the program.
 ```
 qwer
 ```
@@ -43,4 +49,4 @@ qwer
 ## Link
 Link to repository:
 
-qwer
+wqer
