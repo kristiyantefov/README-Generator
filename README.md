@@ -42,6 +42,8 @@ Link to repository:
 
 https://github.com/kristiyantefov/README-Generator
 
-Link to instruction with video:
+Link to Video Tutorial:
+* click on the image to open the video tutorial
 
+[<img src="./images/cover.png" width="50%">](https://drive.google.com/file/d/18LqUiMWNvsP6447SrNSNtPukR7vuYWM-/view?usp=sharing)
 
