@@ -22,7 +22,7 @@ const questions = [
     validate: username => {
       if (username) {
          return true 
-        } else { console.log("Enter your GitHub username")
+        } else { console.log("Enter your email address")
       }
     }
   },
@@ -33,7 +33,7 @@ const questions = [
     validate: username => {
       if (username) {
          return true 
-        } else { console.log("Enter your GitHub username")
+        } else { console.log("Enter your project name")
       }
     }
   },
@@ -41,6 +41,12 @@ const questions = [
     type: "input",
     message: "Please write a short description of your project",
     name: "description",
+    validate: username => {
+      if (username) {
+         return true 
+        } else { console.log("Give a short description about your project")
+      }
+    }
   },
   {
     type: "list",
@@ -52,26 +58,56 @@ const questions = [
     type: "input",
     message: "What command should be run to instal the program?",
     name: "instalCommand",
+    validate: username => {
+      if (username) {
+         return true 
+        } else { console.log("Enter the instal command")
+      }
+    }
   },
   {
     type: "input",
     message: "What command should be run to start the program?",
     name: "runProgram",
+    validate: username => {
+      if (username) {
+         return true 
+        } else { console.log("Enter the command to run the program")
+      }
+    }
   },
   {
     type: "input",
     message: "Enter you repository address",
     name: "repo",
+    validate: username => {
+      if (username) {
+         return true 
+        } else { console.log("Enter your repository address")
+      }
+    }
   },
   {
     type: "input",
     message: "What does the user need to know about contributing to the repo?",
     name: "contributing",
+    validate: username => {
+      if (username) {
+         return true 
+        } else { console.log("Please give a short description what users need to know about contributing to your repo ")
+      }
+    }
   },
   {
     type: "input",
     message: "What does the user need to know about using the program?",
     name: "usage",
+    validate: username => {
+      if (username) {
+         return true 
+        } else { console.log("Enter what user need to know about using the program")
+      }
+    }
   },
 ];
 
