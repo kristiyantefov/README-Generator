@@ -9,7 +9,8 @@ const generateREADME = ({ username, email, projectName, description, instalComma
 * [Installation](#installation)
 * [Usage](#usage)
 * [How to Contribute](#how-to-contribute)
-* [Questions?](#questions)
+* [Questions](#questions)
+
 ${renderLicenseLink(license)}
 ## Description
 ${description}
@@ -22,23 +23,31 @@ ${instalCommand}
 \`\`\`
 ${runProgram}
 \`\`\`
+
 ## Usage
 ${usage}
+
 ## How to Contribute
+
 ${contributing}
-### Reach me here: 
-[${username}](https://github.com/${username})  
+
+## Questions
+
+* Reach me here on my GitHub account.
+
+[${username}](https://github.com/${username}) 
+
+* Reach me on my email address for additional questions.
+
 ${email}
-### Link
-Link to repo:
+
+## Link
+Link to repository:
+
 ${repo}
 `
-
 }
 
-// module.exports = generateREADME()
-// // TODO: Create a function that returns a license badge based on which license is passed in
-// // If there is no license, return an empty string
 const renderLicenseBadge = (license) => {
 if (license === 'Apache License 2.0'){
   return `[![Hex.pm](https://img.shields.io/hexpm/l/apa?style=for-the-badge)](https://choosealicense.com/licenses/apache-2.0/) ![GitHub all releases](https://img.shields.io/github/downloads/kristiyantefov/README-Generator/total?color=%232481C2&style=for-the-badge)`
@@ -53,33 +62,19 @@ if (license === 'Apache License 2.0'){
 }
 }
 
-// // TODO: Create a function that returns the license link
-// // If there is no license, return an empty string
-// function renderLicenseLink(license) {}
 const renderLicenseLink = (license) => {
   if (license === 'Apache License 2.0'){
-    return `${'## License'}\n [${license}](https://choosealicense.com/licenses/apache-2.0)'}`
+    return `${'## License'}\n * This application is covered under: [${license}](https://choosealicense.com/licenses/apache-2.0)`
   } else if (license === 'MIT License') {
-    return `${'## License'}\n [${license}](https://choosealicense.com/licenses/mit)`
+    return `${'## License'}\n * This application is covered under: [${license}](https://choosealicense.com/licenses/mit)`
   } else if (license === 'GNU General Public License v3.0') {
-    return `${'## License'}\n  [${license}](https://choosealicense.com/licenses/gpl-3.0)`
+    return `${'## License'}\n * This application is covered under: [${license}](https://choosealicense.com/licenses/gpl-3.0)`
   } else if (license === 'Mozilla Public License 2.0') {
-    return `${'## License'}\n  [${license}](https://choosealicense.com/licenses/mpl-2.0)`
+    return `${'## License'}\n * This application is covered under: [${license}](https://choosealicense.com/licenses/mpl-2.0)`
   } else {
     return ""
   }
   }
-
-// // TODO: Create a function that returns the license section of README
-// // If there is no license, return an empty string
-// function renderLicenseSection(license) {}
-
-// // TODO: Create a function to generate markdown for README
-// function generateMarkdown(data) {
-//   return `# ${data.title}
-
-// `;
-// }
 
 module.exports = {generateREADME,renderLicenseBadge}
 

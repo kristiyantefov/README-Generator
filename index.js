@@ -119,7 +119,7 @@ const init = () => {
   =================
   `)
   inquirer.prompt(questions).then((answers) => {
-    fs.writeFile('README1.md', generateREADME(answers), (err) => {
+    fs.writeFile('./Generated/README.md', generateREADME(answers), (err) => {
       err ? console.log(err) : console.log("Successfully created README.md!")
   }) });
 }
