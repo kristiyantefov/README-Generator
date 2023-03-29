@@ -1,8 +1,8 @@
-// TODO: Include packages needed for this application
+// Const to require inquirer fs and generateMardown.js
 const inquirer = require("inquirer");
 const fs = require("fs");
 const {generateREADME} = require("./utils/generateMarkdown.js");
-
+// Questions with validations for user to answer and readme.md file will be generated based on user answers
 const questions = [
   {
     type: "input",
@@ -11,7 +11,8 @@ const questions = [
     validate: username => {
       if (username) {
          return true 
-        } else { console.log("Enter your GitHub username")
+        //  If the user did not input something it will receive an error message in red 
+        } else { console.log("\x1b[41m", "Enter your GitHub username")
       }
     }
   },
@@ -22,7 +23,7 @@ const questions = [
     validate: username => {
       if (username) {
          return true 
-        } else { console.log("Enter your email address")
+        } else { console.log("\x1b[41m", "Enter your email address")
       }
     }
   },
@@ -33,7 +34,7 @@ const questions = [
     validate: username => {
       if (username) {
          return true 
-        } else { console.log("Enter your project name")
+        } else { console.log("\x1b[41m", "Enter your project name")
       }
     }
   },
@@ -44,11 +45,12 @@ const questions = [
     validate: username => {
       if (username) {
          return true 
-        } else { console.log("Give a short description about your project")
+        } else { console.log("\x1b[41m", "Give a short description about your project")
       }
     }
   },
   {
+    // this question is a list so the user can choose between deferent type of license
     type: "list",
     message: "What kind of license should your project have?",
     name: "license",
@@ -61,7 +63,7 @@ const questions = [
     validate: username => {
       if (username) {
          return true 
-        } else { console.log("Enter the instal command")
+        } else { console.log("\x1b[41m", "Enter the instal command")
       }
     }
   },
@@ -72,7 +74,18 @@ const questions = [
     validate: username => {
       if (username) {
          return true 
-        } else { console.log("Enter the command to run the program")
+        } else { console.log("\x1b[41m", "Enter the command to run the program")
+      }
+    }
+  },
+  {
+    type: "input",
+    message: "What command should be run to test the program?",
+    name: "testProgram",
+    validate: username => {
+      if (username) {
+         return true 
+        } else { console.log("\x1b[41m", "Enter the command to test the program")
       }
     }
   },
@@ -83,7 +96,7 @@ const questions = [
     validate: username => {
       if (username) {
          return true 
-        } else { console.log("Enter your repository address")
+        } else { console.log("\x1b[41m", "Enter your repository address")
       }
     }
   },
@@ -94,7 +107,7 @@ const questions = [
     validate: username => {
       if (username) {
          return true 
-        } else { console.log("Please give a short description what users need to know about contributing to your repo ")
+        } else { console.log("\x1b[41m", "Please give a short description what users need to know about contributing to your repo ")
       }
     }
   },
@@ -105,12 +118,12 @@ const questions = [
     validate: username => {
       if (username) {
          return true 
-        } else { console.log("Enter what user need to know about using the program")
+        } else { console.log("\x1b[41m", "Enter what user need to know about using the program")
       }
     }
   },
 ];
-
+// function to initialize the application
 const init = () => {
   console.log(`
   =================
@@ -118,9 +131,10 @@ const init = () => {
   Answer the following question prompts to generate a professional README.md file.
   =================
   `)
+  // this function will get the user answers and it will pass it on generateREADME function and write it to the file 
   inquirer.prompt(questions).then((answers) => {
     fs.writeFile('./Generated/README.md', generateREADME(answers), (err) => {
-      err ? console.log(err) : console.log("Successfully created README.md!")
+      err ? console.log(err) : console.log("Successfully created README.md! in the folder", "\x1b[32m'GENERATED'")
   }) });
 }
 init()
