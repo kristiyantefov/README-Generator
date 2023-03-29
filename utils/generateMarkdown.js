@@ -1,3 +1,4 @@
+// function to generate the README.md content
 const generateREADME = ({ username, email, projectName, description, testProgram, instalCommand, usage, license, runProgram, repo, contributing }) => {
 
   return `${renderLicenseBadge(license)}    
@@ -53,7 +54,7 @@ Link to repository:
 ${repo}
 `
 }
-
+// function to render the license badge
 const renderLicenseBadge = (license) => {
 if (license === 'Apache License 2.0'){
   return `[![Hex.pm](https://img.shields.io/hexpm/l/apa?style=for-the-badge)](https://choosealicense.com/licenses/apache-2.0/)`
@@ -67,7 +68,7 @@ if (license === 'Apache License 2.0'){
   return ""
 }
 }
-
+// function to render license link
 const renderLicenseLink = (license) => {
   if (license === 'Apache License 2.0'){
     return `${'## License'}\n * This application is covered under: [${license}](https://choosealicense.com/licenses/apache-2.0)`
