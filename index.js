@@ -20,8 +20,8 @@ const questions = [
     type: "input",
     message: "What is your email address?",
     name: "email",
-    validate: username => {
-      if (username) {
+    validate: email => {
+      if (email) {
          return true 
         } else { console.log("\x1b[41m", "Enter your email address")
       }
@@ -31,8 +31,8 @@ const questions = [
     type: "input",
     message: "What is your project's name?",
     name: "projectName",
-    validate: username => {
-      if (username) {
+    validate: projectName => {
+      if (projectName) {
          return true 
         } else { console.log("\x1b[41m", "Enter your project name")
       }
@@ -42,8 +42,8 @@ const questions = [
     type: "input",
     message: "Please write a short description of your project",
     name: "description",
-    validate: username => {
-      if (username) {
+    validate: description => {
+      if (description) {
          return true 
         } else { console.log("\x1b[41m", "Give a short description about your project")
       }
@@ -60,8 +60,8 @@ const questions = [
     type: "input",
     message: "What command should be run to instal the program?",
     name: "instalCommand",
-    validate: username => {
-      if (username) {
+    validate: instalCommand => {
+      if (instalCommand) {
          return true 
         } else { console.log("\x1b[41m", "Enter the instal command")
       }
@@ -71,8 +71,8 @@ const questions = [
     type: "input",
     message: "What command should be run to start the program?",
     name: "runProgram",
-    validate: username => {
-      if (username) {
+    validate: runProgram => {
+      if (runProgram) {
          return true 
         } else { console.log("\x1b[41m", "Enter the command to run the program")
       }
@@ -82,8 +82,8 @@ const questions = [
     type: "input",
     message: "What command should be run to test the program?",
     name: "testProgram",
-    validate: username => {
-      if (username) {
+    validate: testProgram => {
+      if (testProgram) {
          return true 
         } else { console.log("\x1b[41m", "Enter the command to test the program")
       }
@@ -93,8 +93,8 @@ const questions = [
     type: "input",
     message: "Enter you repository address",
     name: "repo",
-    validate: username => {
-      if (username) {
+    validate: repo => {
+      if (repo) {
          return true 
         } else { console.log("\x1b[41m", "Enter your repository address")
       }
@@ -104,8 +104,8 @@ const questions = [
     type: "input",
     message: "What does the user need to know about contributing to the repo?",
     name: "contributing",
-    validate: username => {
-      if (username) {
+    validate: contributing => {
+      if (contributing) {
          return true 
         } else { console.log("\x1b[41m", "Please give a short description what users need to know about contributing to your repo ")
       }
@@ -115,8 +115,8 @@ const questions = [
     type: "input",
     message: "What does the user need to know about using the program?",
     name: "usage",
-    validate: username => {
-      if (username) {
+    validate: usage => {
+      if (usage) {
          return true 
         } else { console.log("\x1b[41m", "Enter what user need to know about using the program")
       }
